@@ -8,13 +8,130 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="https://kit.fontawesome.com/35509639c9.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Nanum+Pen+Script&family=Zen+Dots&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="body-results">
   <header>
   </header>
   <main>
-  </main>
-  <script src="js/data.js"></script>
-  <script src="js/main.js"></script>
+    <div class="results-view">
+      <div class="nav-results">
+        <div class="nav-arrow">
+          <i class="fa-solid fa-arrow-left-long"></i>
+        </div>
+        <div class="title-bar">
+          <h3 class="airport-name">
+            Corona Airport
+          </h3>
+        </div>
+      </div>
+      <div class="row-container">
+        <div class="card-container">
+          <div class="card-overlay">IFR</div>
+          <div class="card">Flight Rule</div>
+        </div>
+        <div class="card-container">
+          <div class="card-overlay weather" id="weather-top">
+            <i class="fa-sharp fa-solid fa-cloud-showers-heavy"></i>
+            32&#176;C
+          </div>
+          <div class="card" id="weather-bottom">
+            Light Rain
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-overlay">13 kts</div>
+          <div class="card">220&#176;</div>
+        </div>
+      </div>
+      <div class="row-container">
+        <div class="card-container">
+          <div class="card-overlay">2.5 nm</div>
+          <div class="card">Visibility</div>
+        </div>
+        <div class="card-container">
+          <div class="card-overlay">1 nm</div>
+          <div class="card">Runway Visibility</div>
+        </div>
+        <div class="card-container">
+          <div class="card-overlay altimeter" id="altimeter-top">30.01 hg</div>
+          <div class="card" id="altimeter-bottom">Altimeter</div>
+        </div>
+      </div>
+      <div class="tabs-container">
+        <div class="tabbed-views">
+          <div class="tab-container">
+            <div class="tab" data-view="html">Raw</div>
+            <div class="tab active" data-view="css">Decoded</div>
+          </div>
+          <div class="view-container">
+            <div class="view hidden" data-view="html">
+              <div class="info">
+                <p>
+                  KAJO 102009Z 26013G21KT 3SM -RA BR FEW007
+      BKN013 OVC044 12/11 A3005 RMK AO2 P0001
+                </p>
+
+              </div>
+            </div>
+            <div class="view" data-view="css">
+              <div class="info">
+                <h3>
+                  Station Identifier : KAJO
+                </h3>
+                <h3>
+                  Time Stamp: 2023-01-10T20:22:05.425877Z
+                </h3>
+                <h3>
+                  Conditions: Light Rain, Mist
+                </h3>
+                <h3>
+                  Density Altitude:   171 ft
+                </h3>
+                <h3>
+                  Pressure Altitude: 403 ft
+                </h3>
+                <div class="table-container">
+                  <table>
+                    <caption>Clouds</caption>
+                    <thead>
+                      <tr>
+                        <th>Type</th>
+                        <th>Altitude</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="results-container">
+      <div class="search-container hide">
+        <div class="header">
+          <h1 class="logo">
+            Get AV Weather
+          </h1>
+        </div>
+        <label for="search-input" class="search-label">Search for an airport to get current WX</label>
+        <div class="input-container">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="search-input">
+          <div id="search-results"></div>
+        </div>
+      </div>
+      <script src="js/data.js"></script>
+      <script src="js/main.js"></script>
 </body>
 </html>
