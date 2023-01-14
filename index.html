@@ -23,41 +23,34 @@
           <i class="fa-solid fa-arrow-left-long"></i>
         </div>
         <div class="title-bar">
-          <h3 class="airport-name">
-            Corona Airport
-          </h3>
+          <h3 class="airport-name" id="airport-name"></h3>
         </div>
       </div>
       <div class="row-container">
         <div class="card-container">
-          <div class="card-overlay">IFR</div>
+          <div class="card-overlay" id="flight-rule"></div>
           <div class="card">Flight Rule</div>
         </div>
         <div class="card-container">
-          <div class="card-overlay weather" id="weather-top">
-            <i class="fa-sharp fa-solid fa-cloud-showers-heavy"></i>
-            32&#176;C
-          </div>
-          <div class="card" id="weather-bottom">
-            Light Rain
-          </div>
+          <div class="card-overlay weather" id="weather-top"></div>
+          <div class="card" id="weather-bottom"></div>
         </div>
         <div class="card-container">
-          <div class="card-overlay">13 kts</div>
-          <div class="card">220&#176;</div>
+          <div class="card-overlay" id="wind-speed"></div>
+          <div class="card" id="wind-direction"></div>
         </div>
       </div>
       <div class="row-container">
         <div class="card-container">
-          <div class="card-overlay">2.5 nm</div>
+          <div class="card-overlay" id="visibility"></div>
           <div class="card">Visibility</div>
         </div>
         <div class="card-container">
-          <div class="card-overlay">1 nm</div>
-          <div class="card">Runway Visibility</div>
+          <div class="card-overlay density" id="density"></div>
+          <div class="card">Density Altitude</div>
         </div>
         <div class="card-container">
-          <div class="card-overlay altimeter" id="altimeter-top">30.01 hg</div>
+          <div class="card-overlay altimeter" id="altimeter"></div>
           <div class="card" id="altimeter-bottom">Altimeter</div>
         </div>
       </div>
@@ -70,31 +63,16 @@
           <div class="view-container">
             <div class="view hidden" data-view="html">
               <div class="info">
-                <p>
-                  KAJO 102009Z 26013G21KT 3SM -RA BR FEW007
-      BKN013 OVC044 12/11 A3005 RMK AO2 P0001
-                </p>
+                <p id="raw-metar"></p>
 
               </div>
             </div>
             <div class="view" data-view="css">
               <div class="info">
-                <h3>
-                  Station Identifier : KAJO
-                </h3>
-                <h3>
-                  Time Stamp: 2023-01-10T20:22:05.425877Z
-                </h3>
-                <h3>
-                  Conditions: Light Rain, Mist
-                </h3>
-                <h3>
-                  Density Altitude:   171 ft
-                </h3>
-                <h3>
-                  Pressure Altitude: 403 ft
-                </h3>
-                <div class="table-container">
+                <h3 id="station-id"></h3>
+                <h3 id="time"></h3>
+                <h3 id="pressure-altitude"></h3>
+                <div class="table-container hide" id="table">
                   <table>
                     <caption>Clouds</caption>
                     <thead>
@@ -104,12 +82,14 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                      </tr>
                     </tbody>
                   </table>
+                </div>
+                <div class="cloud hide" id="cloud">
+                  <h1>
+                    No Clouds Reported
+                  </h1>
+                  <i class="fa-solid fa-cloud"></i>
                 </div>
               </div>
             </div>
@@ -118,7 +98,7 @@
       </div>
     </div>
     <div class="results-container">
-      <div class="search-container hide">
+      <div class="search-container hide" id="search-container">
         <div class="header">
           <h1 class="logo">
             Get AV Weather

@@ -162,7 +162,7 @@
   display: flex;
   gap: 1rem;
   justify-content: center;
-  margin: 1rem 0 1.5rem;
+  margin: 2rem 0;
 }
 
 h1 {
@@ -264,6 +264,7 @@ h1 {
 
 caption {
   font-weight: bold;
+  padding-bottom: 1rem;
 }
 
 table {
@@ -294,6 +295,29 @@ table td {
 }
 
 .weather,
-.altimeter {
+.altimeter,
+.density {
   background-color: #0006ba;
+}
+
+#flight-rule {
+  font-weight: bold;
+}
+
+.green {
+  background-color: rgb(0, 220, 0);
+}
+
+.cloud {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #b3adad;
+}
+
+.fa-cloud {
+  font-size: 6rem;
+  color: #b3adad;
 }
