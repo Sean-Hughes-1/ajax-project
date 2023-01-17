@@ -114,7 +114,7 @@ function handleBackArrow() {
 
 }
 // displaying data on results page
-var results = {};
+
 // DOM elements for cards
 var flightRule = document.getElementById('flight-rule');
 var airportName = document.getElementById('airport-name');
@@ -172,7 +172,6 @@ function displayResults(data, airport) {
   pressureAltitude.innerHTML = 'Pressure Altitude: ' + results.pressure_altitude + ' ' + results.units.altitude;
   // cloud table
   if (results.clouds.length === 0) {
-    console.log('no clouds');
     tableDiv.className = 'table-container hide';
     noClouds.removeAttribute('style');
   } else {

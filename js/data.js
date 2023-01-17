@@ -1,7 +1,8 @@
-/* exported data */
+/* exported results */
 /* exported airports */
 // data received from AVWX API
 // Airport List
+var results = {};
 const airports = [
   {
     country_code: 'US',
