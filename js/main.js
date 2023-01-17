@@ -156,7 +156,8 @@ function displayResults(data, airport) {
     windSpeed.className = 'card-overlay';
   }
   if (results.wx_codes.length === 0) {
-    weatherBottom.innerHTML = 'Clear Skies';
+    weatherBottom.innerHTML = 'No precipitation';
+    weatherTop.innerHTML = results.temperature.value + '&#176' + results.units.temperature;
   } else {
     weatherBottom.innerHTML = results.wx_codes[0].value;
   }
