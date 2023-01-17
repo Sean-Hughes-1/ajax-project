@@ -1,4 +1,4 @@
- # ajax-project
+# ajax-project
 # Aviation Weather
 
 A dynamic HTML, CSS, and JavaScript solo project.
