@@ -15,6 +15,15 @@ const airports = [
   {
     country_code: 'US',
     region_name: 'California',
+    iata: 'AJO',
+    icao: 'KAJO',
+    airport: 'Corona Municiple Airport',
+    latitude: 0,
+    longitude: 0
+  },
+  {
+    country_code: 'US',
+    region_name: 'California',
     iata: 'HHR',
     icao: 'KHHR',
     airport: 'Hawthorne Municipal Airport (Jack Northrop Field)',

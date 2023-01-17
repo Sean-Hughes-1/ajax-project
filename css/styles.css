@@ -38,6 +38,7 @@
   position: absolute;
   align-items: center;
   margin-left: 3.5rem;
+  width: 100%;
 }
 
 .title-bar {
@@ -320,4 +321,129 @@ table td {
 .fa-cloud {
   font-size: 6rem;
   color: #b3adad;
+}
+
+@media (max-width: 1160px) {
+  .input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 200%;
+    height: 50px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+  }
+
+  .card {
+    height: 50px;
+    width: 190px;
+    border-radius: 0 0 10px 10px;
+    background-color: #0006ba;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card-overlay {
+    position: relative;
+    height: 50px;
+    width: 190px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: white;
+  }
+
+  .nav-results {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+  }
+
+  .nav-arrow {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    width: 100%;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 690px) {
+  .body-results {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+  }
+
+  .card {
+    height: 50px;
+    width: 105px;
+    border-radius: 0 0 10px 10px;
+    background-color: #0006ba;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card-overlay {
+    position: relative;
+    height: 50px;
+    width: 105px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: white;
+  }
+
+  .nav-results {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+  }
+
+  .nav-arrow {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    width: 100%;
+    margin-left: 20px;
+  }
+
+  .results-view {
+    margin: 0;
+    overflow: hidden;
+  }
 }
