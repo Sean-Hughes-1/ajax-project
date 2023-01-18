@@ -24,7 +24,7 @@
   background-image: url("../images/sunset-ga5a45cb33_1920-trans.png");
   background-repeat: no-repeat;
   overflow: hidden;
-  background-size: contain;
+  background-size: fill;
 }
 
 .nav-results {
@@ -251,6 +251,7 @@ p {
   align-items: flex-start;
   background-color: #b8b8b88f;
   height: 100%;
+  border-radius: 10px;
 }
 
 .shield {
@@ -262,6 +263,7 @@ p {
   width: 100%;
   background-color: #b8b8b84b;
   height: 100%;
+  border-radius: 10px;
 }
 
 .hidden {
@@ -365,7 +367,7 @@ table td {
     height: 50px;
     width: 190px;
     border-radius: 0 0 10px 10px;
-    background-color: #0006ba;
+    background-color: #02020277;
     color: white;
     display: flex;
     justify-content: center;
@@ -424,7 +426,7 @@ table td {
     height: 50px;
     width: 105px;
     border-radius: 0 0 10px 10px;
-    background-color: #0006ba;
+    background-color: #02020277;
     color: white;
     display: flex;
     justify-content: center;
