@@ -50,9 +50,9 @@ function getWeather(icao, airport) {
   request.setRequestHeader('Authorization', 'wu0icY1PqK87EZ84HMd5Qd4OJVGwbv34BqEZ3g7SAMQ');
   request.onreadystatechange = function () {
     if (this.readyState === 4) {
-      console.log('Status:', this.status);
-      console.log('Headers:', this.getAllResponseHeaders());
-      console.log('Body:', this.responseText);
+      // console.log('Status:', this.status);
+      // console.log('Headers:', this.getAllResponseHeaders());
+      // console.log('Body:', this.responseText);
       results = JSON.parse(this.responseText);
       displayResults(results, airport);
     }
@@ -86,6 +86,7 @@ function handleClick(event) {
     }
   }
 }
+
 // view swapping
 var body = document.querySelector('body');
 var resultsView = document.querySelector('.results-view');
@@ -141,7 +142,11 @@ function displayResults(data, airport) {
   flightRule.innerHTML = results.flight_rules;
   weatherTop.innerHTML = results.temperature.value + '&#176' + results.units.temperature;
   windSpeed.innerHTML = results.wind_speed.value + ' ' + results.units.wind_speed;
-  windDirection.innerHTML = results.wind_direction.value + '&#176';
+  if (results.wind_direction.value === null) {
+    windDirection.innerHTML = results.wind_direction.repr;
+  } else {
+    windDirection.innerHTML = results.wind_direction.value + '&#176';
+  }
   visibility.innerHTML = results.visibility.value + ' ' + results.units.visibility;
   altimeter.innerHTML = results.altimeter.value + ' ' + results.units.altimeter;
   densityAltitude.innerHTML = results.density_altitude + ' ' + results.units.altitude;
